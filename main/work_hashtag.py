@@ -1,7 +1,9 @@
 import re
 
 def create_hashtag_link(tag_word):  # функция форматирования
-    return f'<a href="/tag/{tag_word[1:]}">{tag_word}</a>'
+    tag_word_for_adress = re.sub(r'[^\w\s]', '', tag_word)  # Удаление запрещённых знаков
+    return f'<a href="/tag/{tag_word_for_adress}">{tag_word}</a>'
+
 
 """ За главный тег поста принимает первый тег, который был напечатан в посте"""
 def return_first_tag(con):  # Функция возврата первого тега в посте
