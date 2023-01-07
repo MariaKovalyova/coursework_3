@@ -28,5 +28,5 @@ app.register_blueprint(bookmark_del_blueprint)  # Удалить закладк�
 
 if __name__ == "__main__":
     """ 127.0.0.1:5000 - дефолтный IP-адрес """
-    app.run(debug=False)
+    app.run(host="0.0.0.0", debug=False)
 
